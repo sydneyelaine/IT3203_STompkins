@@ -1,1 +1,12 @@
+/* Establish site style to match Dinky by using according font
+  and colors.*/
 
+/*Define Body */
+body {
+  font-family; "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333333
+  line-height: 1.5;
+}
