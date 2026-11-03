@@ -1,24 +1,57 @@
+<!-- Define document type and language -->
 <!DOCTYPE html>
 <html lang="en">
+<!-- Define head elemments and link style sheet. Altered previous page head title -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sydney Tompkins GitHub Webpage</title>
+    <title>HTML Evolution - Sydney Tompkins</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<!-- Establish and define body elements -->
 <body>
+    <!-- Replaced previous header for navigation menu header -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History and Evolution</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="concepts.hmtl">Key Concepts</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="about.html">About Project</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <h1>Welcome to my site for IT 3203!</h1>
-    </header>
+<!--Define main layout to replace previous test 'Hello!' -->
+    <main class="container">
+        <h1>HTML Evolution</h1>
+        <p><strong>Abstract:</strong> HTML gives the overall web page the structure needed for accessibility 
+            and visual comprehension. It tells the browser how to accommodate the site and its associated functions. 
+            By maintaining a well-structured HTML architecture, web platforms achieve major advantages when being 
+            crawled and indexed by modern search systems. It acts as the browser's definitive blueprint. </p>
+        
+        <h2>Focus Areas</h2>
+        <ul>
+            <li><strong>Semantics:</strong> Separating the core document layout structural definition completely away
+                from style rules and logic systems. </li>
+            <li><strong>Living standard:</strong> Dynamic specifications governed fluidly without hard version numbers.</li>
+            <li><strong>Inclusive Engineering:</strong> Formatting code infrastructure cleanly to support accessible 
+                processing by screen readers and alternative systems.</li>
+        </ul>
 
-    <main>
-        <section>
-            <h2>Hello!</h2>
-        </section>
+        <h2> Table of Contents</h2>
+        <ol>
+            <li><a href="history.html">Topic 1: Early and Recent Development, and Modern Layout Engines</a></li>
+            <li><a href="accessibility.html">Topic 2: Legal Compliance, Governing Standards, and Inclusive Engineering</a></li>
+            <li><a href="concepts.html">Glossary</a></li>
+            <li><a href="references.html">Citations and Extra Refernces</a></li>
+            <li><a href="about.html"> Project and Author Information</li>
+        </ol>
     </main>
 
-    <footer>
-      
+    <footer id="main-footer">
+        <p>This website is a class project built for IT 3203. 
+            View the official <a href="https://github.io" target="_blank">KSU IT 3203 Course Website</p>
     </footer>
 
 </body>
