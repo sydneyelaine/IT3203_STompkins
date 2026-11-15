@@ -24,36 +24,58 @@
     <main class="container">
       <h1>Topic 1: Historical Development of HTML</h1>
 
-      <h2>Early Development</h2>
-      <p>HTML was invented by Tim Berners-Lee in 1991 with 18 basic tags that focused heavily on simple
-        text and hyperlinks within text. Early developers initially used complex layout tables to organize layouts,
-        which proved resource-heavy and hard for modern screen processors to navigate cleanly.</p>
-      <h2>Recent Developments</h2>
-      <p>Modern layouts utilize dedicated processing infrastructures to read and handle site structural markups 
-        seamlessly across unique operational applications:</p>
+      <section aria-labelledby="early-dev-heading">
+          <h2 id="early-dev-heading">Early Development</h2>
+          <p>HTML was invented by Tim Berners-Lee in 1991 with 18 basic tags that focused heavily on simple
+            text and hyperlinks within text. Early developers initially used complex layout tables to organize layouts,
+            which proved resource-heavy and hard for modern screen processors to navigate cleanly.</p>
+      </section>
+        
+      <section aria-labelledby="timeline-heading">
+          <h2 id="timeline-heading">Key Milestones &amp; The HTML Living Standard</h2>
+          <p>Modern layouts utilize dedicated processing infrastructures to read and handle site structural markups 
+            seamlessly across unique operational applications:</p>
+          <!-- Impliment history time line. -->
+           <div class="container-block">
+               <ul>
+                   <li><strong>1991 — First HTML Draft:</strong> Tim Berners-Lee publishes <em>HTML Tags</em>, introducing foundational elements such as headings, paragraphs, lists, and anchor links (<code>&lt;a&gt;</code>).</li>
+                   <li><strong>November 1995 — HTML 2.0:</strong> The Internet Engineering Task Force (IETF) publishes RFC 1866, establishing the first formal standard for HTML forms and core document structure.</li>
+                   <li><strong>January 1997 – December 1999 — HTML 3.2 &amp; HTML 4.01:</strong> The World Wide Web Consortium (W3C) standardizes HTML 3.2 and HTML 4.01, introducing Cascading Style Sheets (CSS) support to separate visual styling from semantic markup.</li>
+                   <li><strong>2004 — Formation of WHATWG:</strong> Engineers from Apple, Mozilla, and Opera form the Web Hypertext Application Technology Working Group (WHATWG) to evolve HTML incrementally while the W3C focuses on strict XML-based XHTML 2.0.</li>
+                   <li><strong>October 28, 2014 — W3C HTML5 Recommendation:</strong> W3C publishes HTML5 as a formal Recommendation, adding native multimedia (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>), graphics (<code>&lt;canvas&gt;</code>), 
+                       and semantic landmarks (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>).</li>
+                   <li><strong>May 28, 2019 — Unified HTML Living Standard:</strong> W3C and WHATWG sign a Memorandum of Understanding retiring separate W3C HTML specifications. 
+                       WHATWG's <strong>HTML Living Standard</strong> becomes the sole authoritative specification—updated continuously as browsers ship new features, permanently eliminating numbered versions (there is no "HTML6").</li>
+               </ul>
+          </div>
+      </section>
+
+         <section aria-labelledby="engines-heading">
+      <h2 id="engines-heading">Recent Developments &amp; Modern Layout Engines</h2>
+      <p>Modern browsers implement the HTML Living Standard through dedicated rendering and layout engines that parse HTML into the Document Object Model (DOM) and combine it with CSS:</p>
 
       <!-- Establish table to display according data -->
       <table>
         <thread>
           <tr>
-            <th>Browser Engine</th>
-            <th>Primary Organizations</th>
-            <th>Target Web Environments</th>
+            <th scope="col">Browser Engine</th>
+            <th scope="col">Primary Organizations</th>
+            <th scope="col">Target Web Environments</th
           </tr>
         </thread>
         <tbody>
           <tr>
-            <td>Blink Engine</td>
+            <td><strong>Blink Engine</strong></td>
             <td>Google</td>
             <td>Powers Chrome, Microsft Edge, and Opera platforms.</td>
           </tr>
           <tr>
-            <td>WebKit Engine</td>
+            <td><strong>WebKit Engine</strong></td>
             <td>Apple</td>
             <td>Powers Safari for iOS, iPadOS and macOS.</td>
           </tr>
           <tr>
-            <td>Gecko Engine</td>
+            <td><strong>Gecko Engine</strong></td>
             <td>Mozilla</td>
             <td>Independent, open-source engine that powers Firefox.</td>
           </tr>
