@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Evolution - Self-Assessment Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History &amp; Evolution</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About Project</a></li>
+      <li><a href="quiz.html" class="active" aria-current="page">Self-Assessment Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Self-Assessment Quiz</h1>
+    <p>Test your knowledge of HTML Evolution, browser layout engines, WCAG accessibility rules, and AI Engine Optimization (AIEO). A score of <strong>70% (7/10)</strong> or higher is required to pass.</p>
+
+    <!-- Impliment 10-minute timer -->
+    <div class="timer-banner" role="status">
+      Time Remaining: <strong id="timer-display">10:00</strong>
+    </div>
+
+    <!-- Results summary box (Revealed after submission) -->
+    <section id="results-summary" class="results-panel hidden" aria-live="polite">
+      <h2 id="pass-fail-heading"></h2>
+      <p><strong>Total Score:</strong> <span id="total-score"></span></p>
+      <p><strong>Time Spent:</strong> <span id="time-spent"></span></p>
+      <button type="button" id="reset-btn-top" class="btn btn-secondary">Retake / Reset Quiz</button>
+    </section>
+
+    <!-- Define assessment form -->
+    <form id="quiz-form" novalidate>
+
+      <!-- Q1: Fill-in-the-blank -->
+      <div class="question-card" id="card-q1">
+        <label for="q1"><strong>1. [Fill in the Blank]</strong> Who invented HTML in 1991 with 18 basic tags? (Full Name)</label>
+        <input type="text" id="q1" name="q1" placeholder="Enter full name..." autocomplete="off">
+        <div class="feedback" id="feedback-q1"></div>
+      </div>
+
+      <!-- Q2: Fill-in-the-blank -->
+      <div class="question-card" id="card-q2">
+        <label for="q2"><strong>2. [Fill in the Blank]</strong> Which organization maintains the ongoing HTML Living Standard introduced in 2019? (Acronym)</label>
+        <input type="text" id="q2" name="q2" placeholder="Enter acronym..." autocomplete="off">
+        <div class="feedback" id="feedback-q2"></div>
+      </div>
+
+      <!-- Q3: Multiple-Choice (Single Answer) -->
+      <fieldset class="question-card" id="card-q3">
+        <legend><strong>3. [Multiple Choice]</strong> Which browser layout engine is developed by Google and powers Chrome, Microsoft Edge, and Opera?</legend>
+        <label><input type="radio" name="q3" value="a"> Gecko</label>
+        <label><input type="radio" name="q3" value="b"> Blink</label>
+        <label><input type="radio" name="q3" value="c"> WebKit</label>
+        <div class="feedback" id="feedback-q3"></div>
+      </fieldset>
+
+      <!-- Q4: Multiple-Choice (Single Answer) -->
+      <fieldset class="question-card" id="card-q4">
+        <legend><strong>4. [Multiple Choice]</strong> What internal hierarchical tree structure does a browser engine build as it parses raw HTML markup line-by-line?</legend>
+        <label><input type="radio" name="q4" value="a"> Document Object Model (DOM)</label>
+        <label><input type="radio" name="q4" value="b"> CSS Flexbox Model</label>
+        <label><input type="radio" name="q4" value="c"> Web Components API</label>
+        <div class="feedback" id="feedback-q4"></div>
+      </fieldset>
+
+      <!-- Q5: Multiple-Choice (Single Answer) -->
+      <fieldset class="question-card" id="card-q5">
+        <legend><strong>5. [Multiple Choice]</strong> How does the HTML Living Standard model differ from older versions like HTML 4.01?</legend>
+        <label><input type="radio" name="q5" value="a"> It eliminates strict version numbers so attributes evolve continuously</label>
+        <label><input type="radio" name="q5" value="b"> It forces all styling to be written inside HTML tables</label>
+        <label><input type="radio" name="q5" value="c"> It removes support for screen readers and assistive technology</label>
+        <div class="feedback" id="feedback-q5"></div>
+      </fieldset>
+
+      <!-- Q6: Multi-Selection (More than one correct answer) -->
+      <fieldset class="question-card" id="card-q6">
+        <legend><strong>6. [Multi-Select — Check ALL that apply]</strong> Which of the following are core accessibility rules covered on our Accessibility page?</legend>
+        <label><input type="checkbox" name="q6" value="alt"> Adding descriptive <code>alt</code> attributes to images</label>
+        <label><input type="checkbox" name="q6" value="labels"> Linking explicit <code>&lt;label&gt;</code> elements to form controls</label>
+        <label><input type="checkbox" name="q6" value="lang"> Specifying the document language on the root <code>&lt;html&gt;</code> element</label>
+        <label><input type="checkbox" name="q6" value="tables"> Using nested layout tables for page navigation</label>
+        <div class="feedback" id="feedback-q6"></div>
+      </fieldset>
+
+      <!-- Q7: Multi-Selection (More than one correct answer) -->
+      <fieldset class="question-card" id="card-q7">
+        <legend><strong>7. [Multi-Select — Check ALL that apply]</strong> Which organizations collaborate to govern web standards and developer documentation?</legend>
+        <label><input type="checkbox" name="q7" value="whatwg"> WHATWG</label>
+        <label><input type="checkbox" name="q7" value="w3c"> W3C</label>
+        <label><input type="checkbox" name="q7" value="owd"> Open Web Docs</label>
+        <label><input type="checkbox" name="q7" value="nasa"> NASA</label>
+        <div class="feedback" id="feedback-q7"></div>
+      </fieldset>
+
+      <!-- Q8: Multiple-Choice (Single Answer) -->
+      <fieldset class="question-card" id="card-q8">
+        <legend><strong>8. [Multiple Choice]</strong> What is the goal of AI Engine Optimization (AIEO)?</legend>
+        <label><input type="radio" name="q8" value="a"> Blocking all search engines from indexing a website</label>
+        <label><input type="radio" name="q8" value="b"> Structuring underlying site data with semantic tags and micro-data so AI crawlers can parse and index content accurately</label>
+        <label><input type="radio" name="q8" value="c"> Replacing HTML with image-only screenshots</label>
+        <div class="feedback" id="feedback-q8"></div>
+      </fieldset>
+
+      <!-- Q9: Multiple-Choice (Single Answer) -->
+      <fieldset class="question-card" id="card-q9">
+        <legend><strong>9. [Multiple Choice]</strong> Which HTML tags are examples of Semantic HTML elements?</legend>
+        <label><input type="radio" name="q9" value="a"> <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code></label>
+        <label><input type="radio" name="q9" value="b"> <code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, and <code>&lt;blink&gt;</code></label>
+        <label><input type="radio" name="q9" value="c"> <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> exclusively</label>
+        <div class="feedback" id="feedback-q9"></div>
+      </fieldset>
+
+      <!-- Q10: Multiple-Choice (Single Answer) -->
+      <fieldset class="question-card" id="card-q10">
+        <legend><strong>10. [Multiple Choice]</strong> Which CSS layout modules are highlighted in this project for interface layout management?</legend>
+        <label><input type="radio" name="q10" value="a"> CSS Flexbox and CSS Grid</label>
+        <label><input type="radio" name="q10" value="b"> HTML Framesets and Marquee tags</label>
+        <label><input type="radio" name="q10" value="c"> Inline table borders only</label>
+        <div class="feedback" id="feedback-q10"></div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" id="submit-btn" class="btn btn-primary">Submit Quiz</button>
+        <button type="button" id="reset-btn" class="btn btn-secondary">Reset Quiz</button>
+      </div>
+    </form>
+  </main>
+
+  <footer id="main-footer">
+    <p>This website is a class project framework built for IT 3203. View the <a href="https://github.io" target="_blank" rel="noopener">official KSU IT 3203 Course Website</a>.</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
